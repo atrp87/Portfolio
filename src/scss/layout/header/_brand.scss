@@ -1,0 +1,13 @@
+.brand-logo {
+  h1 {
+    position: relative;
+    z-index: 999;
+    font-family: quincyFontBold;
+    span {
+      color: $blue;
+      font-weight: bold;
+      display: block;
+      line-height: 1;
+    }
+  }
+}

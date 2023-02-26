@@ -1,0 +1,21 @@
+#not-found {
+  text-align: center;
+  background-color: $pink;
+
+  .content {
+    width: 100%;
+
+    @include breakpoint-lg {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    a {
+      color: $blue;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

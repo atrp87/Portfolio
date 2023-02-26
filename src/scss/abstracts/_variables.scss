@@ -1,0 +1,18 @@
+$pink: #f6ece9;
+$blue: #00364e;
+$black: #000000;
+$white: #ffffff;
+$yellow: #ead917;
+$white-tone: #f1ecde;
+$red: #e94453;
+
+// #1e374f
+// #8a97a0
+
+$bar-width: 40px;
+$bar-height: 4px;
+$hamburger-gap: 6px;
+$hamburger-margin: 8px;
+$animation-timing: 200ms ease-in-out;
+$hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
+$x-width: calc($hamburger-height * 1.41421356237);

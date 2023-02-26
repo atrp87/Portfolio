@@ -1,0 +1,30 @@
+@import './base/reset';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './typography/typography';
+@import './base/base';
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+// ? layout
+@import './layout/header/header';
+@import './layout/header/mobileMenu';
+@import './layout/header/header';
+@import './layout/header/brand';
+@import './layout/sectionBuilder';
+@import './layout/footer';
+
+// ? components
+@import './components/SplashScreen';
+@import './components/buttons';
+@import './components/banner';
+@import './components/card';
+@import './components/profile';
+@import './components/projects';
+@import './components/blog';
+@import './components/notFound';
+
+// ? routes
+@import '../scss/routes/notFound';
+@import '../scss/routes/blogs';
+@import '../scss/routes/article';

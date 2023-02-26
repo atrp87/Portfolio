@@ -1,0 +1,13 @@
+#projects {
+  background-color: $white-tone;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 60px 60px;
+
+    @include breakpoint-lg {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

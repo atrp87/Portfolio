@@ -1,0 +1,35 @@
+.banner {
+  background-color: $blue;
+  color: $white-tone;
+  min-height: 150px;
+  padding: 10px 0 10px 0;
+
+  &::before {
+    content: 'languages & More';
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    @include breakpoint-lg {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    div {
+      font-family: 'Itim', cursive;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+}

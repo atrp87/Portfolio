@@ -1,0 +1,114 @@
+.header {
+  background-color: $pink;
+  position: relative;
+  padding: 3vw;
+  z-index: 20;
+
+  @include breakpoint-lg {
+    padding: 4vw;
+  }
+
+  nav,
+  .nav-links > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li:not(:last-child) {
+      margin-right: 1.8vw;
+    }
+
+    li {
+      a {
+        color: $black;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links,
+  .nav-spotlight {
+    display: none;
+    @include breakpoint-lg {
+      display: block;
+    }
+  }
+  .mobile-menu-button {
+    z-index: 9999;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: $hamburger-gap;
+    width: max-content;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      width: $bar-width;
+      height: $bar-height;
+      background-color: $blue;
+      border-radius: 9999px;
+      transform-origin: left center;
+      transition: opacity $animation-timing, width $animation-timing,
+        rotate $animation-timing, translate $animation-timing,
+        background-color $animation-timing;
+    }
+    &::after {
+      content: '';
+      width: $bar-width;
+      height: $bar-height;
+      background-color: $blue;
+      border-radius: 9999px;
+      transform-origin: left center;
+      transition: opacity $animation-timing, width $animation-timing,
+        rotate $animation-timing, translate $animation-timing,
+        background-color $animation-timing;
+    }
+    input {
+      content: '';
+      width: $bar-width;
+      height: $bar-height;
+      background-color: $blue;
+      border-radius: 9999px;
+      transform-origin: left center;
+      transition: opacity $animation-timing, width $animation-timing,
+        rotate $animation-timing, translate $animation-timing,
+        background-color $animation-timing;
+      appearance: none;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      &:checked {
+        opacity: 0;
+        width: 0;
+      }
+    }
+    &:has(input:checked) {
+      &::before {
+        rotate: 45deg;
+        width: $x-width;
+        translate: 0 calc($bar-height / -2);
+      }
+      &::after {
+        rotate: -45deg;
+        width: $x-width;
+        translate: 0 calc($bar-height / 2);
+      }
+    }
+  }
+
+  @include breakpoint-lg {
+    .mobile-menu-button {
+      display: none;
+    }
+  }
+}

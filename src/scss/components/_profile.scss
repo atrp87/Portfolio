@@ -1,0 +1,53 @@
+.profile {
+  &:nth-of-type(1) {
+    background-color: $pink;
+
+    a {
+      color: $blue;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+
+    .figure-img {
+      max-width: 500px;
+    }
+
+    img {
+      border: 1px solid;
+    }
+
+    figcaption {
+      order: -1;
+      margin-bottom: 3%;
+      line-height: 1.2;
+
+      @include breakpoint-lg {
+        order: 0;
+        margin-bottom: unset;
+      }
+    }
+
+    @include breakpoint-lg {
+      flex-direction: row;
+
+      .figure-img {
+        width: 50%;
+      }
+
+      figcaption {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 6%;
+      }
+    }
+  }
+}
