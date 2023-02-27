@@ -12,7 +12,16 @@ const defaultCard =
         <h3>Articles</h3>
       </div>
       <div className='card--text title-to-text'>
-        Write ups on the projects I built, problems i had and what i did about them, things i learnt and my experiance. all short 3 minute reads
+        <p>
+          Write ups on the projects I built, problems i had and what i did about them, things i learnt and my experiance. all short 3 minute reads.
+          alternitavely you can read shorter vesions on my
+          <a
+            rel='noreferrer'
+            href='https://github.com/atrp87'
+            target='_blank'>
+            GitHub ReadMe
+          </a>
+        </p>
       </div>
       <div className='text-to-text card-btn default-card-btn'>
         <LinkButton to='/blogs' type='internal'>

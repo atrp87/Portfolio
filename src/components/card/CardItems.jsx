@@ -3,6 +3,7 @@ import LinkButton from '../buttons/LinkButton';
 
 export default function CardItems({ card }) {
 
+  console.log(card.id);
   return (
     <>
       <div className='card--img'>
@@ -53,7 +54,10 @@ export default function CardItems({ card }) {
               }
             })
             :
-            <LinkButton to='/blogs' type='internal'>
+
+            <LinkButton
+              to={`/article/${card.id}`}
+              type='internal'>
               Read Article
             </LinkButton>
           }

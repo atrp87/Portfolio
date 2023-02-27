@@ -166,6 +166,7 @@ const cardData = {
 
   blogs: [
     {
+      id: 1,
       languages: 'React | SCSS | Firebase',
       title: 'Netflix',
       description: 'A dynamic and responsive Netflix clone. Users can sign up, sign in, browse films and series fetched from TMDB API, aswell as add or delete favourites for the current logged in user, stored in firestore database.',
@@ -175,6 +176,7 @@ const cardData = {
       }
     },
     {
+      id: 2,
       languages: 'React | React Bootstrap | SCSS',
       title: 'Premiere Rentals Fife Ltd ',
       description: 'A dynamic, responsive, semantic and accessible. Users can sign up, sign in, browse films and series fetched from TMDB API, aswell as add or delete favourites for the current logged in user, stored in firestore database.',
@@ -184,6 +186,7 @@ const cardData = {
       },
     },
     {
+      id: 3,
       languages: 'Javascript | CSS | HTML',
       title: 'City Skies',
       description: 'A weather forecast web app displaying the current and weekly forecast using the open weather API. The user can search city by name and select Celsius or Fahrenheit units. This project allowed me to get a deeper understanding of the Callback queue and promise priority (Microtasks queue).',
@@ -193,6 +196,7 @@ const cardData = {
       }
     },
     {
+      id: 4,
       languages: 'Javascript | CSS | HTML',
       title: 'Omni Gym',
       description: 'A responsive brochure website showing the services the gym provides (memberships, classes, equipment and more). Minimalist design using CSS (grid, flexbox) and DOM manipulation.',
@@ -202,6 +206,7 @@ const cardData = {
       },
     },
     {
+      id: 5,
       languages: 'Ruby | Sinatra | PostgreSQL | Bootstrap',
       title: 'Money Bulky',
       description: 'A finance tracking app where I devised a user story, focusing its use for university graduates. The user is able to view, edit, create and delete individual categories, merchants and transactions. The app is backed by PostgreSQL database.',
@@ -211,6 +216,7 @@ const cardData = {
       },
     },
     {
+      id: 6,
       languages: 'React | React Router | Bootstrap',
       title: 'Pilton Youth & Childrens Project',
       description: 'Client experience using Agile methodologies (specifically Scrum) refactoring an administration app for the volunteers at PYCP. Daily stand-ups, updating the status on tickets, code reviews along with Sprint planning, Sprint review and Sprint retrospective meetings.',

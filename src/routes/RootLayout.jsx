@@ -14,7 +14,7 @@ export default function RootLayout() {
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
 
   }, [location])
 

@@ -9,7 +9,6 @@ import SocialIcons from '../components/buttons/SocialIcons';
 import ResumePDF from '../assets/Andrew_Peattie__Resume.pdf';
 
 export default function App() {
-
   const [profileSummary, profileObjectives] = profileData;
 
   return (
