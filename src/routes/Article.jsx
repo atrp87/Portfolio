@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Markdown from 'markdown-to-jsx';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Btn from '../components/button/Btn';
 import Code from '../utils/CodeMD';
 import AnimateInView from '../layout/AnimateInView';
@@ -14,7 +14,7 @@ export default function Article() {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const req = await fetch(`/src/data/markdown/${params.id}.md`);
+        const req = await fetch(`/data/markdown/${params.id}.md`);
         const resp = await req.text();
         setArticle(resp);
 

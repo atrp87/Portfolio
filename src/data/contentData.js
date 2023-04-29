@@ -27,7 +27,7 @@ const contentData = {
       links: [
         {
           type: 'live',
-          url: 'https://netflix-react-dom.netlify.app/'
+          url: 'https://netflix-atrp87.vercel.app/'
         },
         {
           type: 'github',
