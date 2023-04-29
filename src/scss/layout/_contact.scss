@@ -1,0 +1,19 @@
+footer {
+  background-image: url('../assets/background/bgDarkBlue.svg');
+
+  .container {
+    padding: 50px 25px;
+    background-color: $blue;
+    color: $font-white;
+    text-align: center;
+
+    @include breakpoint-sm {
+      padding: 50px 60px;
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}

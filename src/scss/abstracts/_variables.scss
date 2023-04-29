@@ -1,0 +1,19 @@
+$font-black: #111;
+$font-white: #fff;
+$font-grey: rgba(17, 17, 17, 0.7647058824);
+$font-hero: #1e202f;
+
+$blue: #4d526a;
+$white: #eee;
+$orange: #ff9b01;
+$red: #e95453;
+$yellow: #f1c40f;
+
+// Hamburger Button
+$bar-width: 40px;
+$bar-height: 4px;
+$hamburger-gap: 6px;
+$hamburger-margin: 8px;
+$animation-timing: 200ms ease-in-out;
+$hamburger-height: calc($bar-height * 3 + $hamburger-gap * 2);
+$x-width: calc($hamburger-height * 1.41421356237);

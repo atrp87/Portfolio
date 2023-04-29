@@ -1,0 +1,205 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background-image: -o-linear-gradient(right, #e48717 50%, #d9d9d9 50%);
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(50%, #e48717),
+    color-stop(50%, #d9d9d9)
+  );
+  background-image: linear-gradient(to left, #e48717 50%, #d9d9d9 50%);
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../assets/background/bgHeader.svg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__content {
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .animate-view {
+      width: 100%;
+      z-index: 999;
+      overflow: visible;
+      span {
+        width: 100%;
+      }
+    }
+
+    @include breakpoint-lg {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+
+      .animate-view:first-of-type {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        width: 100%;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__pic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+
+    @include breakpoint-lg {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+
+    &-bg {
+      overflow: visible;
+      z-index: 999;
+      background-image: url('../assets/brand/andrew.webp');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100%;
+      height: 320px;
+      width: 300px;
+
+      @include breakpoint-lg {
+        height: 600px;
+        width: 100%;
+      }
+    }
+
+    .social__btn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+
+      @include breakpoint-lg {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        margin: 0;
+        height: 4rem;
+        width: 4rem;
+        color: $font-hero;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 90%;
+
+    @include breakpoint-lg {
+      margin-right: 0.1rem;
+      margin-bottom: 60px;
+    }
+
+    &-name {
+      width: 400px;
+      max-width: 100%;
+      height: 65px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      @include breakpoint-xs-down {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+
+    &-subname {
+      top: 55px;
+      left: -10px;
+      position: absolute;
+      background-color: $font-hero;
+      -webkit-transform: skewX(-20deg);
+      -ms-transform: skewX(-20deg);
+      transform: skewX(-20deg);
+      font-size: 20px;
+      max-width: 131px;
+      font-weight: bold;
+      color: $orange;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      letter-spacing: 1px;
+
+      @include breakpoint-xs-down {
+        top: 50px;
+      }
+
+      @include breakpoint-lg {
+        left: 258px;
+      }
+    }
+  }
+}

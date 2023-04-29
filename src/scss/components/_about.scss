@@ -1,0 +1,38 @@
+.about {
+  background-image: url('../assets/background/bgDarkBlue.svg');
+  &:nth-of-type(3) {
+    background-image: url('../assets/background/bgOrange.svg');
+    .content {
+      background-color: $orange;
+      color: $font-black;
+
+      .resume__btn {
+        background-color: $font-black;
+        color: $font-white;
+
+        &:hover {
+          background-color: rgba(245, 245, 245, 0.7647058824);
+          color: $font-black;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 50px 25px;
+    max-width: 800px;
+    width: 90%;
+    background-color: $blue;
+    color: $font-white;
+
+    @include breakpoint-sm {
+      padding: 50px 60px;
+      width: 80%;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      text-align: center;
+    }
+  }
+}

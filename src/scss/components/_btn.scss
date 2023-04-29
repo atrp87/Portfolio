@@ -1,0 +1,72 @@
+.btn {
+  text-transform: uppercase;
+  color: $font-white;
+  font-weight: 600;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 8px 25px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  margin-left: 1.5rem;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5647058824);
+    color: $font-white;
+  }
+
+  @include breakpoint-lg {
+    font-size: 1rem;
+  }
+}
+
+.resume__btn {
+  text-transform: uppercase;
+  color: $font-black;
+  font-weight: 600;
+  display: inline-block;
+  background-color: $white;
+  padding: 8px 25px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5647058824);
+    color: $font-white;
+  }
+}
+
+.social__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  a {
+    margin-left: 1.6rem;
+    color: $white;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:hover {
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px);
+      color: $orange;
+    }
+
+    svg {
+      height: 3.5rem;
+      width: 3.5rem;
+
+      @include breakpoint-sm {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  }
+}

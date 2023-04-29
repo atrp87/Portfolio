@@ -1,0 +1,165 @@
+#project {
+  background-image: url('../assets/background/bgGray.svg');
+
+  .container {
+    background-color: $white;
+
+    .project-wrapper {
+      margin-top: 6rem;
+      @include breakpoint-lg {
+        margin-top: 0;
+      }
+
+      .prj {
+        width: 95%;
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        border-radius: 25px;
+        margin-bottom: 15rem;
+        padding: 25px 0;
+        @include breakpoint-lg {
+          margin-bottom: 5rem;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &__content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          @include breakpoint-lg {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+          }
+        }
+
+        &__img {
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          width: 95%;
+          -ms-flex-negative: 0;
+          flex-shrink: 0;
+          height: 300px;
+          -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          border-radius: 20px;
+          overflow: hidden;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          &:hover {
+            -webkit-transform: translateY(-53%);
+            -ms-transform: translateY(-53%);
+            transform: translateY(-53%);
+          }
+
+          @include breakpoint-md {
+            width: 85%;
+          }
+
+          @include breakpoint-lg {
+            -webkit-transform: translateX(-60px);
+            -ms-transform: translateX(-60px);
+            transform: translateX(-60px);
+            width: 300px;
+            &:hover {
+              -webkit-transform: translateX(-50px);
+              -ms-transform: translateX(-50px);
+              transform: translateX(-50px);
+            }
+          }
+        }
+
+        &__body {
+          margin-top: -120px;
+          text-align: center;
+          padding: 25px;
+
+          @include breakpoint-md {
+            margin-top: -110px;
+            text-align: center;
+            padding: 0 55px;
+          }
+          @include breakpoint-lg {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            padding-right: 25px;
+          }
+        }
+
+        span {
+          color: #7b7992;
+          margin-bottom: 15px;
+          display: block;
+          font-weight: 500;
+        }
+
+        &__title {
+          font-size: 24px;
+          font-weight: 600;
+          color: #0d0925;
+          margin-bottom: 20px;
+        }
+
+        &__text {
+          color: #4e4a67;
+          margin-bottom: 15px;
+          line-height: 1.5em;
+        }
+
+        &__info {
+          margin-bottom: 15px;
+          display: block;
+          font-weight: 500;
+          text-align: left;
+          margin-left: 10px;
+          &::before {
+            content: '•\00A0';
+            color: $font-black;
+            padding-right: 3px;
+            margin-left: -10px;
+          }
+        }
+
+        ul {
+          margin-bottom: 25px;
+          list-style-type: none;
+          li {
+            margin-left: 10px;
+            color: #4e4a67;
+            margin-bottom: 1px;
+            line-height: 1.5em;
+            font-size: 16px;
+            text-align: left;
+
+            &::before {
+              content: '•\00A0';
+              color: $font-black;
+              padding-right: 3px;
+              margin-left: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

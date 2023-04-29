@@ -1,0 +1,66 @@
+.mobile-menu.open {
+  z-index: -1;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  background-image: url('../assets/background/bgDarkBlue.svg');
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  nav {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 40px;
+      max-width: 400px;
+      background-color: $blue;
+
+      @include breakpoint-sm {
+        padding: 50px 60px;
+        width: 80%;
+      }
+
+      a {
+        color: $font-white;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+
+        &:hover {
+          color: $orange;
+        }
+
+        &:last-of-type {
+          color: $font-hero;
+          margin-bottom: 0;
+
+          &:hover {
+            color: $orange;
+            color: $font-white;
+          }
+        }
+      }
+    }
+  }
+}
