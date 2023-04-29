@@ -14,7 +14,8 @@ export default function Article() {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const req = await fetch(`/data/markdown/${params.id}.md`);
+        const req = await fetch(`/markdown/${params.id}.md`);
+        // const req = await fetch(`/src/data/markdown/${params.id}.md`);
         const resp = await req.text();
         setArticle(resp);
 
