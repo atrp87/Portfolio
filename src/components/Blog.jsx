@@ -54,6 +54,8 @@ export default function Blog({ blogs }) {
               Project Blog
             </h2>
             <p>
+              Look back at the code you write and see how you have improved and what you could change etc
+              ALOWS ME TO RE ITERATE OVER WHAT I ACTUALY DID
               My blog posts will offer insight into my projects, detailing the challenges I faced, the solutions I devised to overcome them, the valuable lessons I learned, and my overall experience with each project. Each article is a concise read, taking only 3-5 minutes to cover all the essential information</p>
             <p>
               If you would like a format that is brief and to the point, you can refer to my

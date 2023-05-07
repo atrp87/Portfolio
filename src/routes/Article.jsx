@@ -5,6 +5,7 @@ import Btn from '../components/button/Btn';
 import Code from '../utils/CodeMD';
 import AnimateInView from '../layout/AnimateInView';
 import { ThemeContext } from '../context/ThemeContext';
+import authorImg from '../assets/brand/andrew_author.jpg';
 
 export default function Article() {
   const params = useParams();
@@ -63,8 +64,32 @@ export default function Article() {
               {article}
             </Markdown>
           </div>
+          <div className='article__end'>
+            <p>I appreciate you taking the time to read my experience on this project. Thank you for your support.</p>
+          </div>
+          <section className='article__footer'>
+            <div className='article__footer-img-container'>
+              <img src={authorImg} alt='Andrew Peattie' />
+            </div>
+            <div className='article__footer-description'>
+              <p>
+                Written By&nbsp;
+                <a
+                  href='https://www.linkedin.com/in/andrew-peattie/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label='Go to Andrew Peatties&#39;s LinkedIn'
+                >
+                  Andrew Peattie
+                </a>
+              </p>
+              <p>
+                As a web developer, I am passionate about creating responsive and user-friendly websites. Experience working with various front-end technologies, I’m continuously pursuing professional and personal growth.
+              </p>
+            </div>
+          </section>
         </div>
-      </AnimateInView>
+      </AnimateInView >
     </article >
   );
 }
