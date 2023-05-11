@@ -5,18 +5,26 @@ import project4 from '../assets/home/omni_gym.jpg';
 import project5 from '../assets/home/money_bulk.jpg';
 import project6 from '../assets/home/pycp.jpg';
 
+// A dynamic and responsive website, with a visual design inspired by Netflix.
+
+// Users are able to sign up and sign in.When a user is logged in, they can browse films and series fetched from the TMDB API, as well as add or delete their favourites. 
+
+// backed by Firestore database to authenticate, store and manage user data.
+
 const contentData = {
   projects: [
     {
       id: 1,
       tools: 'React · SCSS · Firebase',
       title: 'Netflix',
-      summary: 'A dynamic and responsive Netflix clone. Users can sign up, sign in, browse films and series fetched from TMDB API, aswell as add or delete favourites for the current logged in user, stored in firestore database.',
-      summary1: '',
+      summary: 'A dynamic and responsive website, with a visual design inspired by Netflix.',
+      summary1: 'Users are able to sign up and sign in. When a user is logged in, they can browse films and series fetched from the TMDB API, as well as add or delete their favourites. Backed by Firestore database to authenticate, store and manage user data.',
       info: 'email: andrew@admin.dev · password: 123456',
       lessons: [
         'useEffect, React Context API and useReducers',
-        'Reusable components and custom hooks ( useFetch )',
+        'Reusable custom hook ( useFetch ) that abstracts away fetch logic, enabling multiple URL endpoints used across different components',
+        'Context API ',
+        'Reusable Custom hooks ( useFetch ) ',
         'Firestore Database & Firebase Authentication ( email and password )',
         'React Router v6'
       ],
@@ -39,14 +47,15 @@ const contentData = {
       id: 2,
       tools: 'React · React Bootstrap · SCSS',
       title: 'Premiere Rentals Fife Ltd',
-      summary: 'A dynamic, responsive, semantic and accessible. Users can sign up, sign in, browse films and series fetched from TMDB API, aswell as add or delete favourites for the current logged in user, stored in firestore database.',
-      summary1: '',
+      summary: 'A responsive and accessible website. Users can sign up, sign in, browse films and series fetched from TMDB API, aswell as add or delete favourites for the current logged in user, stored in firestore database.',
+      summary1: 'This project allowed me to client experiance real word',
       info: 'Work in progress',
       lessons: [
         'useEffect, React Context API and useReducers',
-        'Reusable components and custom hooks ( useFetch )',
+        'Reusable components',
+        'Presentational components',
         'Firestore Database & Firebase Authentication ( email and password )',
-        'React Router v6'
+        'typography mixings variables DRY PSUEDO ELEMENTS PSUEDO CALLASES'
       ],
       image: {
         src: project2,
@@ -67,12 +76,12 @@ const contentData = {
       id: 3,
       tools: 'Javascript · CSS · HTML',
       title: 'City Skies',
-      summary: 'A weather forecast web app displaying the current and weekly forecast using the open weather API. The user can search city by name and select Celsius or Fahrenheit scales.',
-      summary1: 'This project allowed me to get a deeper understanding of the Callback queue and promise priority (Microtasks queue)',
+      summary: 'A dynamic web application that allows users to check the current weather and weekly forecast for any city around the world.',
+      summary1: 'Users can simply search for a city by name and retrieve the weather information, with the added flexibility to switch between Celsius and Fahrenheit based on their location or personal preference.',
       lessons: [
-        'AJAX requests to multiple API end points',
-        'Handling asynchronous tasks with Promises and Async / Await',
-        'Reverse Geocoding (HTML 5 Geolocation and Google maps API)'
+        'Multiple HTTP network requests to different API end points',
+        'Handling asynchronous tasks with Promises using Async / Await',
+        'Broadening understanding of Execution Context, Call Stack, Event Loop and Callback Queue'
       ],
       image: {
         src: project3,
@@ -93,12 +102,14 @@ const contentData = {
       id: 4,
       tools: 'Javascript · CSS · HTML',
       title: 'Omni Gym',
-      summary: 'A responsive brochure website showing the services the gym provides (memberships, classes, equipment and more). Minimalist design using CSS (grid, flexbox) and DOM manipulation.',
-      summary1: 'Minimalist design using CSS (grid, flexbox) and DOM manipulation.',
+      summary: 'I had the opportunity to create a website for a local gym that utilized a responsive, static single page application (SPA). This allowed me to showcase the gym\'s facilities, services, and programs in a user-friendly format.',
+      summary1: 'Working directly with a client incorporating their preferences and feedback to deliver a real-world solution that maintained the gym\'s branding and met the client\'s needs.',
       lessons: [
-        'Event delegation utilizing event propagation',
-        'Intersection Observer API ( lazy image loading & scroll trigger animations',
-        'Client-side form validation'
+        'Client-side form validation',
+        'DOM manipulation and traversal',
+        'Responsive design & layouts',
+        'Utilizing event delegation and event propagation',
+        'Intersection Observer API ( Lazy image rendering & Scroll-triggered animations )',
       ],
       image: {
         src: project4,
@@ -149,10 +160,10 @@ const contentData = {
       summary1: 'Daily stand-ups, updating the status on tickets, code reviews along with Sprint planning, Sprint review and Sprint retrospective meetings.',
       info: 'Source Code Under NDA',
       lessons: [
-        'Refactoring class based components to functional components introducing hooks',
-        'React router to change views and move between pages',
-        'What I DID',
-        'CSS Modules'
+        'Rewriting class-based components to functional components using hooks for state management and other component lifecycle methods',
+        'Passing, deconstructing and drilling props',
+        'Modifying, passing and lifting state',
+        'CSS Modules to scope CSS styles'
       ],
       image: {
         src: project6,
