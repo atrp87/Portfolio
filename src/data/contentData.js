@@ -5,12 +5,6 @@ import project4 from '../assets/home/omni_gym.jpg';
 import project5 from '../assets/home/money_bulk.jpg';
 import project6 from '../assets/home/pycp.jpg';
 
-// A dynamic and responsive website, with a visual design inspired by Netflix.
-
-// Users are able to sign up and sign in.When a user is logged in, they can browse films and series fetched from the TMDB API, as well as add or delete their favourites. 
-
-// backed by Firestore database to authenticate, store and manage user data.
-
 const contentData = {
   projects: [
     {
@@ -18,15 +12,13 @@ const contentData = {
       tools: 'React · SCSS · Firebase',
       title: 'Netflix',
       summary: 'A dynamic and responsive website, with a visual design inspired by Netflix.',
-      summary1: 'Users are able to sign up and sign in. When a user is logged in, they can browse films and series fetched from the TMDB API, as well as add or delete their favourites. Backed by Firestore database to authenticate, store and manage user data.',
+      summary1: 'Users are able to sign up and sign in. When a user is logged in, they can browse films and series fetched from the TMDB API, as well as add or delete their favourites. Backed by Firestore database to store and manage user data.',
       info: 'email: andrew@admin.dev · password: 123456',
       lessons: [
-        'useEffect, React Context API and useReducers',
-        'Reusable custom hook ( useFetch ) that abstracts away fetch logic, enabling multiple URL endpoints used across different components',
-        'Context API ',
-        'Reusable Custom hooks ( useFetch ) ',
-        'Firestore Database & Firebase Authentication ( email and password )',
-        'React Router v6'
+        'Custom hook useFetch abstracts fetch request logic, allowing multiple components to use the same logic with different URL endpoints',
+        'Context API providing global state management for user authentication across multiple components without manually passing props through multiple levels of components',
+        'useCollection custom hook provides a reusable solution for fetching and managing Firestore documents, collections, and subcollections across multiple components, e.g manage favorites that are specific to the currently logged-in user',
+        'Client-side routing with React Router'
       ],
       image: {
         src: project1,
@@ -47,15 +39,14 @@ const contentData = {
       id: 2,
       tools: 'React · React Bootstrap · SCSS',
       title: 'Premiere Rentals Fife Ltd',
-      summary: 'A responsive and accessible website. Users can sign up, sign in, browse films and series fetched from TMDB API, aswell as add or delete favourites for the current logged in user, stored in firestore database.',
-      summary1: 'This project allowed me to client experiance real word',
-      info: 'Work in progress',
+      summary: 'I developed a responsive and accessible marketing website for an award-winning, independent letting agent that showcases the services they provide, such as property rentals, property management, property valuation, and advisory services, among others.',
+      summary1: 'Collaborating with the client creating an easy-to-navigate website that includes clear calls-to-action, prominent contact information and direct links to their property ads on onthemarket.com. Highlighting their awards and accomplishments, helping to build a strong brand identity to attract new clients to the business.',
+      info: 'In Development',
       lessons: [
-        'useEffect, React Context API and useReducers',
-        'Reusable components',
-        'Presentational components',
-        'Firestore Database & Firebase Authentication ( email and password )',
-        'typography mixings variables DRY PSUEDO ELEMENTS PSUEDO CALLASES'
+        // 'Reusable components',
+        // 'Presentational components - reusable uniform ui ',
+        // 'seo -- cross browser compatability',
+        // 'typography mixings variables DRY PSUEDO ELEMENTS PSUEDO CALLASES'
       ],
       image: {
         src: project2,
@@ -81,7 +72,7 @@ const contentData = {
       lessons: [
         'Multiple HTTP network requests to different API end points',
         'Handling asynchronous tasks with Promises using Async / Await',
-        'Broadening understanding of Execution Context, Call Stack, Event Loop and Callback Queue'
+        'Deepening understanding of JavaScript\'s concurrency model ( Execution Context, Call Stack, Event Loop and Callback Queue )'
       ],
       image: {
         src: project3,
@@ -102,14 +93,14 @@ const contentData = {
       id: 4,
       tools: 'Javascript · CSS · HTML',
       title: 'Omni Gym',
-      summary: 'I had the opportunity to create a website for a local gym that utilized a responsive, static single page application (SPA). This allowed me to showcase the gym\'s facilities, services, and programs in a user-friendly format.',
+      summary: 'I had the opportunity to create a responsive website for a local gym that showcases the gym\'s facilities, services, and programs in a user-friendly format.',
       summary1: 'Working directly with a client incorporating their preferences and feedback to deliver a real-world solution that maintained the gym\'s branding and met the client\'s needs.',
       lessons: [
         'Client-side form validation',
         'DOM manipulation and traversal',
-        'Responsive design & layouts',
+        'Responsive design and layouts',
         'Utilizing event delegation and event propagation',
-        'Intersection Observer API ( Lazy image rendering & Scroll-triggered animations )',
+        'Intersection Observer API ( Lazy image rendering and Scroll-triggered animations )',
       ],
       image: {
         src: project4,
@@ -130,12 +121,13 @@ const contentData = {
       id: 5,
       tools: 'Ruby · Sinatra · PostgreSQL · Bootstrap',
       title: 'Money Bulk',
-      summary: 'A finance tracking app where I devised a user story, focusing its use for university graduates. The user is able to view, edit, create and delete individual categories, merchants and transactions. The app is backed by PostgreSQL database.',
-      summary1: 'The user is able to view, edit, create and delete individual categories, merchants and transactions. The app is backed by PostgreSQL database.',
+      summary: 'A budget finance app helps users create, track, and analyze their spending patterns, as well as set financial goals.',
+      summary1: 'The budget app allows users to create expense entries by entering the amount for selected categories and merchants of their choice. These entries are then displayed in a table along with the total amount spent. Users have the option to edit or delete these entries, which will also update the total amount spent accordingly. Additionally, users can filter the displayed merchants and categories based on their names. Supported by PostgreSQL database.',
       lessons: [
-        'Object oriented programming with Ruby using an MVC pattern',
-        'CRUD functions and RESTful routes',
-        'Wireframes, UML diagrams, Class diagrams'
+        'Object oriented programming ( Ruby )',
+        'MVC ( Model-View-Controller ) design pattern separating the data, user interface, and application logic',
+        'RESTful conventions of using HTTP methods and URLs to map to the different CRUD operations',
+        'UML diagrams, Class diagrams and Wireframes'
       ],
       image: {
         src: project5,
@@ -156,8 +148,8 @@ const contentData = {
       id: 6,
       tools: 'React · React Router · Bootstrap',
       title: 'Pilton Youth & Children\'s Project',
-      summary: 'Client experience using Agile methodologies (specifically Scrum) refactoring an administration app for the volunteers at PYCP.',
-      summary1: 'Daily stand-ups, updating the status on tickets, code reviews along with Sprint planning, Sprint review and Sprint retrospective meetings.',
+      summary: 'PYCP is a youth organisation that provided assistance and guidance to children, young adults, and their families in the local community. Working collaboratively in a team of six, we maintained and refactored an administration app for the PYCP staff. Our objective was to improve the app\'s functionality and usability, helping the staff manage day-to-day operations more efficiently.',
+      summary1: 'Client experience with Agile methodologies, specifically Scrum, involved daily stand-ups, ticket status updates, Sprint reviews and retrospective meetings.',
       info: 'Source Code Under NDA',
       lessons: [
         'Rewriting class-based components to functional components using hooks for state management and other component lifecycle methods',
