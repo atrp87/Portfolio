@@ -4,46 +4,48 @@ import AnimateInView from '../layout/AnimateInView';
 
 export default function Blog({ blogs }) {
 
-  const bgColor = blogs.map(({ tools }) => {
-    let color = tools.toLowerCase();
+  const bgColor = {
+    react: '#61DAFB',
+    javascript: '#F7DF1E',
+    ruby: '#CC342D',
+  };
 
-    if (color.includes('react')) {
-      return '#61DAFB'
-    }
-    if (color.includes('javascript')) {
-      return '#F7DF1E'
-    }
-    if (color.includes('ruby')) {
-      return '#CC342D'
-    }
+  const blogList = blogs.map(blog => {
+    return (
+      <div className='card' key={blog.id}>
+        <div
+          style={{ backgroundImage: `url(${blog.img})` }}
+          className='card__img'></div>
+        <Link
+          key={blog.id}
+          to={`/article/${blog.id}`}
+          aria-label={`Read ${blog.title} article`}
+          className='card__link'
+        ></Link>
+        <div
+          style={{ backgroundImage: `url(${blog.img})` }}
+          className='card__img-hovered'>
 
-    return null;
-  });
-
-  const blogList = blogs.map((blog, i) => (
-    <div className='blog' key={blog.id}>
-      <Link
-        to={`/article/${blog.id}`}
-        aria-label={`Read ${blog.title} article`}
-        className='blog__link'
-      >
-        {blog.tools &&
-          <div
-            style={{ backgroundColor: bgColor[i] }}
-            className='blog__bg'>
-          </div>}
-        <div className='blog__title'>
-          <h3 >{blog.title}</h3>
         </div>
-        <div className='blog__text'>
-          {blog.tools}
+        <div className='card__body'>
+          <div className='card__body-info'>
+            <a
+              className='card__body-info__tag'
+              style={{ backgroundColor: bgColor[blog.tools.toLowerCase()] || null }}
+            >
+              {blog.tools}
+            </a>
+            <div className='card__body-info__time'>{blog.date}</div>
+          </div>
+          <div className='card__body__about'>
+            <h2>{blog.title}</h2>
+            <p>{blog.content}</p>
+          </div>
+          <div className='card__body__time'>{blog.readTime}</div>
         </div>
-        <div className='blog__text'>
-          {blog.info}
-        </div>
-      </Link>
-    </div>
-  ));
+      </div>
+    );
+  })
 
   return (
     <section id='blog'>
@@ -54,9 +56,8 @@ export default function Blog({ blogs }) {
               Project Blog
             </h2>
             <p>
-              Look back at the code you write and see how you have improved and what you could change etc
-              ALOWS ME TO RE ITERATE OVER WHAT I ACTUALY DID
-              My blog posts will offer insight into my projects, detailing the challenges I faced, the solutions I devised to overcome them, the valuable lessons I learned, and my overall experience with each project. Each article is a concise read, taking only 3-5 minutes to cover all the essential information</p>
+              Each article will offer insight into my projects, detailing the challenges I faced, the solutions I devised to overcome them, the valuable lessons I learned, and my overall experience with each project. Each article is a concise read, taking only 3-5 minutes to cover all the essential information.
+            </p>
             <p>
               If you would like a format that is brief and to the point, you can refer to my
               <a
@@ -65,10 +66,11 @@ export default function Blog({ blogs }) {
                 target='_blank'
                 aria-label='Go to Andrew peattie&#39;s GitHub'
               > GitHub project repositories
-              </a>.
+              </a>
+              .
             </p>
           </SectionHeader>
-          <div className='blog-wrapper'>
+          <div className='card__container'>
             {blogList}
           </div>
         </div>

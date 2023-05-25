@@ -19,8 +19,8 @@ export default function Project({ projects }) {
             style={{ backgroundImage: `url(${prj.image.src}` }}
           >
             <picture>
-              <source srcset={`${prj.image.src}.avif`} type='image/webp' />
-              <source srcset={`${prj.image.src}.png`} type='image/png' />
+              <source srcSet={`${prj.image.src}.avif`} type='image/webp' />
+              <source srcSet={`${prj.image.src}.png`} type='image/png' />
               <img src={`${prj.image.src}.png`} alt='' />
             </picture>
           </a>

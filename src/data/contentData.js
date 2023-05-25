@@ -5,6 +5,13 @@ import project4 from '../assets/home/omni_gym.jpg';
 import project5 from '../assets/home/money_bulk.jpg';
 import project6 from '../assets/home/pycp.jpg';
 
+import article1 from '../assets/article/nf.avif';
+import article2 from '../assets/article/fife-rentals.png';
+import article3 from '../assets/article/cityk.png';
+import article4 from '../assets/article/dom.avif';
+// import article5 from '../assets/article';
+import article6 from '../assets/article/agile.png';
+
 const contentData = {
   projects: [
     {
@@ -16,8 +23,9 @@ const contentData = {
       info: 'email: andrew@admin.dev · password: 123456',
       lessons: [
         'Custom hook useFetch abstracts fetch request logic, allowing multiple components to use the same logic with different URL endpoints',
-        'Context API providing global state management for user authentication across multiple components without manually passing props through multiple levels of components',
-        'useCollection custom hook provides a reusable solution for fetching and managing Firestore documents, collections, and subcollections across multiple components, e.g manage favorites that are specific to the currently logged-in user',
+        'Context API providing user authentication state management for user authentication across multiple components without manually passing props through multiple levels of components',
+        'useCollection custom hook provides a reusable solution for fetching and managing Firestore documents, collections, and subcollections across multiple components, e.g manage favorite movies that are specific to the currently logged-in user',
+        'GitFlow isolating new development from finished work',
         'Client-side routing with React Router'
       ],
       image: {
@@ -43,10 +51,12 @@ const contentData = {
       summary1: 'Collaborating with the client creating an easy-to-navigate website that includes clear calls-to-action, prominent contact information and direct links to their property ads on onthemarket.com. Highlighting their awards and accomplishments, helping to build a strong brand identity to attract new clients to the business.',
       info: 'In Development',
       lessons: [
-        // 'Reusable components',
-        // 'Presentational components - reusable uniform ui ',
-        // 'seo -- cross browser compatability',
-        // 'typography mixings variables DRY PSUEDO ELEMENTS PSUEDO CALLASES'
+        'Reusable components',
+        'Presentational components to ensure a uniform and consistent visual appearance and behavior across different parts of the website',
+        'Accessibility considerations and semantic development',
+        'seo - cross browser compatibility ( styles )',
+        'BEM naming convention',
+        'css - scss - bootstrap ( typography mixins variables DRY PSUEDO ELEMENTS PSUEDO CALLASES )'
       ],
       image: {
         src: project2,
@@ -59,7 +69,7 @@ const contentData = {
         },
         {
           type: 'github',
-          url: 'https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme'
+          url: 'https://github.com/atrp87'
         }
       ]
     },
@@ -70,9 +80,10 @@ const contentData = {
       summary: 'A dynamic web application that allows users to check the current weather and weekly forecast for any city around the world.',
       summary1: 'Users can simply search for a city by name and retrieve the weather information, with the added flexibility to switch between Celsius and Fahrenheit based on their location or personal preference.',
       lessons: [
-        'Multiple HTTP network requests to different API end points',
         'Handling asynchronous tasks with Promises using Async / Await',
-        'Deepening understanding of JavaScript\'s concurrency model ( Execution Context, Call Stack, Event Loop and Callback Queue )'
+        'Integrating third-party Web APIs, handling JSON data structures, data fields and specific formatting',
+        'Multiple HTTP network requests to different API end points',
+        'Data manipulation methods and techniques with ES6',
       ],
       image: {
         src: project3,
@@ -96,11 +107,11 @@ const contentData = {
       summary: 'I had the opportunity to create a responsive website for a local gym that showcases the gym\'s facilities, services, and programs in a user-friendly format.',
       summary1: 'Working directly with a client incorporating their preferences and feedback to deliver a real-world solution that maintained the gym\'s branding and met the client\'s needs.',
       lessons: [
-        'Client-side form validation',
         'DOM manipulation and traversal',
         'Responsive design and layouts',
+        'Client-side form validation',
         'Utilizing event delegation and event propagation',
-        'Intersection Observer API ( Lazy image rendering and Scroll-triggered animations )',
+        'Intersection Observer API ( lazy image rendering and scroll-triggered animations )',
       ],
       image: {
         src: project4,
@@ -119,10 +130,10 @@ const contentData = {
     },
     {
       id: 5,
-      tools: 'Ruby · Sinatra · PostgreSQL · Bootstrap',
+      tools: 'Ruby · Sinatra · PostgreSQL',
       title: 'Money Bulk',
       summary: 'A budget finance app helps users create, track, and analyze their spending patterns, as well as set financial goals.',
-      summary1: 'The budget app allows users to create expense entries by entering the amount for selected categories and merchants of their choice. These entries are then displayed in a table along with the total amount spent. Users have the option to edit or delete these entries, which will also update the total amount spent accordingly. Additionally, users can filter the displayed merchants and categories based on their names. Supported by PostgreSQL database.',
+      summary1: 'Users can create expense entries by entering the amount for selected categories and merchants. New entires are displayed in a table along with the total amount spent. Users have the option to edit or delete these entries, which will also update the total amount spent accordingly. Additionally, users can filter the displayed merchants and categories based on their names. Supported by a PostgreSQL database.',
       lessons: [
         'Object oriented programming ( Ruby )',
         'MVC ( Model-View-Controller ) design pattern separating the data, user interface, and application logic',
@@ -134,10 +145,10 @@ const contentData = {
         alt: 'Money Bulk Landing Page',
       },
       links: [
-        {
-          type: 'live',
-          url: 'https://atrp87.github.io/Omni_Gym/'
-        },
+        // {
+        //   type: 'live',
+        //   url: 'https://atrp87.github.io/Omni_Gym/'
+        // },
         {
           type: 'github',
           url: 'https://github.com/atrp87/Money_Bulk'
@@ -174,38 +185,56 @@ const contentData = {
     {
       id: 1,
       title: 'Netflix',
-      tools: 'React · SCSS · Firebase',
-      info: 'January 20, 2023 - 5 min read'
+      img: article1,
+      tools: 'React',
+      date: '01/20/2022',
+      content: 'Translating a UI design into functional code using a declarative approach / / RELEVANT AND KEY POINT',
+      readTime: '5 min read'
     },
     {
       id: 2,
-      title: 'Premiere Rentals Fife Ltd ',
-      tools: 'React · React Bootstrap · SCSS',
-      info: 'May 1, 2023 - 4 min read'
+      title: 'Premiere Rentals Fife Ltd',
+      img: article2,
+      tools: 'React',
+      date: '05/01/2023',
+      content: 'client collabiration / / RELEVANT AND KEY POINT',
+      readTime: '5 min read'
     },
     {
       id: 3,
       title: 'City Skies',
-      tools: 'Javascript · CSS · HTML',
-      info: 'February 12, 2022 - 3 min read'
+      img: article3,
+      tools: 'Javascript',
+      date: '02/12/2022',
+      content: 'Exploring asynchronous JavaScript, the runtime environment, and Web APIs',
+      readTime: '3 min read'
     },
     {
       id: 4,
       title: 'Omni Gym',
-      tools: 'Javascript · CSS · HTML',
-      info: 'August 29, 2022 - 3 min read'
+      img: article4,
+      tools: 'Javascript',
+      date: '08/29/2022',
+      content: 'Traversing vanilla front-end web development fundamentals',
+      readTime: '3 min read'
     },
-    {
-      id: 5,
-      title: 'Money Bulky',
-      tools: 'Ruby · Sinatra · PostgreSQL · Bootstrap',
-      info: 'November 12, 2021 - 4 min read'
-    },
+    // {
+    //   id: 5,
+    //    title: 'Money bulk',
+    //   img: article5,
+    //   title: 'Ruby',
+    //   date: '11/12/2021',
+    //   content: 'I had the opportunity to approach a local gym and propose the idea of creating a website for them. They were interested in the idea and shared their',
+    //   readTime: '3 min read'
+    // },
     {
       id: 6,
-      title: 'Pilton Youth Project',
-      tools: 'React · React Router · Bootstrap',
-      info: 'June 18, 2022 - 5 min read'
+      title: 'Pilton Youth & Children\'s Project',
+      img: article6,
+      tools: 'React',
+      date: '06/18/2022',
+      content: 'work experiacne / team / / RELEVANT AND KEY POINT',
+      readTime: '5 min read'
     }
   ]
 }

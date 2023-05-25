@@ -65,7 +65,7 @@ export default function Article() {
             </Markdown>
           </div>
           <div className='article__end'>
-            <p>I appreciate you taking the time to read my experience on this project. Thank you for your support.</p>
+            <p>I appreciate you taking the time to read about my experience on this project. Thank you for your support.</p>
           </div>
           <section className='article__footer'>
             <div className='article__footer-img-container'>

@@ -19,8 +19,25 @@
 
     .container {
       background-color: $white;
+
+      a {
+        &:hover {
+          color: #7b7992;
+        }
+      }
+
+      li {
+        &::before {
+          color: $font-black;
+        }
+      }
+
       span {
         color: #7b7992;
+        color: $font-black;
+      }
+      .code span {
+        color: $white;
       }
     }
   }
@@ -31,10 +48,12 @@
       background-color: $blue;
       color: $white;
 
-      .btn {
+      a {
+        color: $orange;
+
         &:hover {
-          background-color: $white;
-          color: $font-black;
+          color: $white;
+          opacity: 0.7;
         }
       }
     }
@@ -46,8 +65,30 @@
       margin-top: 40px;
       width: 100%;
 
+      .btn {
+        color: $white;
+        &:hover {
+          background-color: $white;
+          color: $font-black;
+        }
+      }
+
       li {
-        list-style: inside;
+        margin-bottom: 15px;
+        display: block;
+        line-height: 2rem;
+        text-align: left;
+        margin-left: 10px;
+
+        &::before {
+          content: '•\00A0';
+          padding-right: 3px;
+          margin-left: -10px;
+        }
+
+        p {
+          display: contents;
+        }
       }
 
       &-highlight {
@@ -129,7 +170,11 @@
           letter-spacing: 0.5px;
         }
       }
+
       .article__banner {
+        h2 {
+          margin: 0 !important;
+        }
         margin: 2.6rem 0 1rem 0;
         img {
           border-radius: 1rem;
@@ -140,14 +185,6 @@
           letter-spacing: 0.5px;
           text-align: center;
           margin-top: 0.6rem;
-
-          a {
-            color: #7b7992;
-
-            &:hover {
-              color: $orange;
-            }
-          }
         }
       }
 
@@ -155,6 +192,19 @@
         h2 {
           margin: 2rem 0 0;
           text-transform: none;
+        }
+
+        h4 {
+          margin: 2rem 0 0.7rem 0;
+          font-weight: 500;
+          font-size: 1.1rem;
+          @include breakpoint-md {
+            font-size: 1.07rem;
+          }
+
+          &:first-of-type {
+            margin-top: 1.6rem;
+          }
         }
 
         p {

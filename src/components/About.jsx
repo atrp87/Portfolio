@@ -12,11 +12,8 @@ export default function About({ summary }) {
             </div>
             <div>
               <p>{summary.description1}</p>
-              <br />
               <p>{summary.description2}</p>
-              <br />
               <p>{summary.description3}</p>
-              <br />
               <ResumeBtn />
             </div>
           </div>
