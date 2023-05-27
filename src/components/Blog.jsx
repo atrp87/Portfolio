@@ -29,16 +29,15 @@ export default function Blog({ blogs }) {
         </div>
         <div className='card__body'>
           <div className='card__body-info'>
-            <a
+            <div
               className='card__body-info__tag'
               style={{ backgroundColor: bgColor[blog.tools.toLowerCase()] || null }}
             >
               {blog.tools}
-            </a>
+            </div>
             <div className='card__body-info__time'>{blog.date}</div>
           </div>
           <div className='card__body__about'>
-            <h2>{blog.title}</h2>
             <p>{blog.content}</p>
           </div>
           <div className='card__body__time'>{blog.readTime}</div>
@@ -53,10 +52,10 @@ export default function Blog({ blogs }) {
         <div className='container'>
           <SectionHeader>
             <h2>
-              Project Blog
+              Project Blogs
             </h2>
             <p>
-              Each article will offer insight into my projects, detailing the challenges I faced, the solutions I devised to overcome them, the valuable lessons I learned, and my overall experience with each project. Each article is a concise read, taking only 3-5 minutes to cover all the essential information.
+              Each article will offer insight into my projects, detailing the challenges I faced, the valuable lessons I learned and my overall experience with each project. Each article is a concise read, taking only 3-5 minutes to cover all the essential information.
             </p>
             <p>
               If you would like a format that is brief and to the point, you can refer to my

@@ -5,12 +5,12 @@ import project4 from '../assets/home/omni_gym.jpg';
 import project5 from '../assets/home/money_bulk.jpg';
 import project6 from '../assets/home/pycp.jpg';
 
-import article1 from '../assets/article/nf.avif';
-import article2 from '../assets/article/fife-rentals.png';
-import article3 from '../assets/article/cityk.png';
-import article4 from '../assets/article/dom.avif';
-// import article5 from '../assets/article';
-import article6 from '../assets/article/agile.png';
+import article1 from '../assets/article/card/netflix.png';
+import article2 from '../assets/article/card/fife_rentals.png';
+import article3 from '../assets/article/card/city_skies.png';
+import article4 from '../assets/article/card/omni_gym.png';
+// import article5 from '../assets/article/card/money_bulk.png';
+import article6 from '../assets/article/card/pycp.png';
 
 const contentData = {
   projects: [
@@ -22,11 +22,10 @@ const contentData = {
       summary1: 'Users are able to sign up and sign in. When a user is logged in, they can browse films and series fetched from the TMDB API, as well as add or delete their favourites. Backed by Firestore database to store and manage user data.',
       info: 'email: andrew@admin.dev · password: 123456',
       lessons: [
+        'GitFlow isolating new development and minor changes, like bug fixes, from completed work',
         'Custom hook useFetch abstracts fetch request logic, allowing multiple components to use the same logic with different URL endpoints',
-        'Context API providing user authentication state management for user authentication across multiple components without manually passing props through multiple levels of components',
+        'Context API providing state management for user authentication across multiple components without manually passing props through multiple levels of components',
         'useCollection custom hook provides a reusable solution for fetching and managing Firestore documents, collections, and subcollections across multiple components, e.g manage favorite movies that are specific to the currently logged-in user',
-        'GitFlow isolating new development from finished work',
-        'Client-side routing with React Router'
       ],
       image: {
         src: project1,
@@ -55,6 +54,7 @@ const contentData = {
         'Presentational components to ensure a uniform and consistent visual appearance and behavior across different parts of the website',
         'Accessibility considerations and semantic development',
         'seo - cross browser compatibility ( styles )',
+        'Client-side routing with React Router',
         'BEM naming convention',
         'css - scss - bootstrap ( typography mixins variables DRY PSUEDO ELEMENTS PSUEDO CALLASES )'
       ],
@@ -147,7 +147,7 @@ const contentData = {
       links: [
         // {
         //   type: 'live',
-        //   url: 'https://atrp87.github.io/Omni_Gym/'
+        //   url: ''
         // },
         {
           type: 'github',
@@ -159,8 +159,8 @@ const contentData = {
       id: 6,
       tools: 'React · React Router · Bootstrap',
       title: 'Pilton Youth & Children\'s Project',
-      summary: 'PYCP is a youth organisation that provided assistance and guidance to children, young adults, and their families in the local community. Working collaboratively in a team of six, we maintained and refactored an administration app for the PYCP staff. Our objective was to improve the app\'s functionality and usability, helping the staff manage day-to-day operations more efficiently.',
-      summary1: 'Client experience with Agile methodologies, specifically Scrum, involved daily stand-ups, ticket status updates, Sprint reviews and retrospective meetings.',
+      summary: 'PYCP is a youth organisation that provided assistance and guidance to children, young adults, and their families in the local community. Working collaboratively in a team of six, we refactored and maintained  an administration app for the PYCP staff. Our objective was to improve the app\'s functionality and usability, helping the staff manage day-to-day operations more efficiently.',
+      summary1: 'Client experience with Agile methodologies, specifically Scrum, involved daily stand-ups, ticket status updates and print reviews.',
       info: 'Source Code Under NDA',
       lessons: [
         'Rewriting class-based components to functional components using hooks for state management and other component lifecycle methods',
@@ -188,7 +188,7 @@ const contentData = {
       img: article1,
       tools: 'React',
       date: '01/20/2022',
-      content: 'Translating a UI design into functional code using a declarative approach / / RELEVANT AND KEY POINT',
+      content: 'Translating a UI design into functional code using a declarative approach',
       readTime: '5 min read'
     },
     {
@@ -197,7 +197,7 @@ const contentData = {
       img: article2,
       tools: 'React',
       date: '05/01/2023',
-      content: 'client collabiration / / RELEVANT AND KEY POINT',
+      content: 'Creating practical, real-world solutions through open-ended dialogue, fostering relationships, and maintaining transparency',
       readTime: '5 min read'
     },
     {
@@ -206,7 +206,7 @@ const contentData = {
       img: article3,
       tools: 'Javascript',
       date: '02/12/2022',
-      content: 'Exploring asynchronous JavaScript, the runtime environment, and Web APIs',
+      content: 'Exploring asynchronous JavaScript with promises, the runtime environment, and Web APIs',
       readTime: '3 min read'
     },
     {
@@ -220,11 +220,11 @@ const contentData = {
     },
     // {
     //   id: 5,
-    //    title: 'Money bulk',
+    //   title: 'Money Bulk',
     //   img: article5,
-    //   title: 'Ruby',
+    //   tools: 'Ruby',
     //   date: '11/12/2021',
-    //   content: 'I had the opportunity to approach a local gym and propose the idea of creating a website for them. They were interested in the idea and shared their',
+    //   content: 'OOP / full stack / whats relevant',
     //   readTime: '3 min read'
     // },
     {
@@ -233,7 +233,7 @@ const contentData = {
       img: article6,
       tools: 'React',
       date: '06/18/2022',
-      content: 'work experiacne / team / / RELEVANT AND KEY POINT',
+      content: 'Volunteer work experience in an agile environment with community organisations',
       readTime: '5 min read'
     }
   ]
